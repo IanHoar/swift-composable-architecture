@@ -223,8 +223,8 @@
     }
   }
 
-    @_disfavoredOverload
   extension Case where Value: BindableAction, Value.State: ObservableState {
+      @_disfavoredOverload
     public subscript<Member: Equatable & Sendable>(
       dynamicMember keyPath: WritableKeyPath<Value.State, Member>
     ) -> Case<Member> {
